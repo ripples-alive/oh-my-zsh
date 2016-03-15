@@ -1,7 +1,9 @@
 ZSH_THEME="ripples"
 DISABLE_UPDATE_PROMPT="true"
+HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git svn autojump osx brew composer docker git-flow gitignore npm pip python sudo laravel5 jsontools jenv adb urlencode ubuntu urltools)
+# As plugins is loaded before custom configurations, it is no use to set plugins here.
+# plugins=(git svn autojump osx brew composer docker git-flow gitignore npm pip python sudo laravel5 jsontools adb urlencode ubuntu urltools jenv)
 
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
