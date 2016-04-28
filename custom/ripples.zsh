@@ -9,8 +9,6 @@ export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-alias p=proxychains4
-
 # Add python startup script.
 touch $HOME/.pystartup
 export PYTHONSTARTUP=$HOME/.pystartup
@@ -21,6 +19,7 @@ case "$(uname -s)" in
     Darwin)
 
         alias timeout=gtimeout
+        alias p=proxychains4
 
         # toggle iTerm Dock icon
         # add this to your .bash_profile or .zshrc
@@ -51,6 +50,9 @@ case "$(uname -s)" in
         ;;
 
     Linux*)
+
+        alias p=proxychains
+
         ;;
 
     CYGWIN*|MINGW32*|MSYS*)
