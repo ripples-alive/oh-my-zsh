@@ -10,6 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ripples"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git svn autojump osx brew composer docker git-flow gitignore npm pip python sudo laravel5 jsontools adb urlencode ubuntu urltools jenv)
+plugins=(git svn autojump osx composer docker git-flow gitignore npm pip python sudo laravel5 jsontools adb urlencode ubuntu urltools jenv)
 
 source $ZSH/oh-my-zsh.sh
