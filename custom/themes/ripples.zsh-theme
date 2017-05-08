@@ -1,5 +1,5 @@
 case "$HOST" in
-    Jayvic-MBP)
+    ripples-MBP)
         local host_color=$fg_bold[red]
         ;;
     *)
