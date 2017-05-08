@@ -9,7 +9,7 @@ export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
 # Add python startup script.
