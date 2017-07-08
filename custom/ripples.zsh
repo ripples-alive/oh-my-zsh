@@ -55,6 +55,7 @@ case "$(uname -s)" in
     Linux*)
 
         alias p=proxychains
+        alias sysuser="systemctl --user"
 
         ;;
 
