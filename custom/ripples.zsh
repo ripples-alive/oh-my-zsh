@@ -57,6 +57,15 @@ case "$(uname -s)" in
         alias p=proxychains
         alias sysuser="systemctl --user"
 
+        function at() {
+            if [[ "$1" =~ ^[0-9]+$ ]]
+            then
+                sudo gdb attach $1
+            else
+                sudo gdb attach `pidof $1`
+            fi
+        }
+
         ;;
 
     CYGWIN*|MINGW32*|MSYS*)
