@@ -1,9 +1,11 @@
 ZSH_THEME="ripples"
 DISABLE_UPDATE_PROMPT="true"
-HIST_STAMPS="mm/dd/yyyy"
+
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
 
 # As plugins is loaded before custom configurations, it is no use to set plugins here.
-# plugins=(git svn autojump osx brew composer docker git-flow gitignore npm pip python sudo laravel5 jsontools adb urlencode ubuntu urltools jenv)
+# plugins=()
 
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
@@ -12,9 +14,15 @@ export LANG=en_US.UTF-8
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
-# Add python startup script.
-touch $HOME/.pystartup
-export PYTHONSTARTUP=$HOME/.pystartup
+# Set go path
+export GOPATH="${HOME}/.go"
+# Set python startup script.
+test -e "${HOME}/.pystartup" && export PYTHONSTARTUP="$HOME/.pystartup"
+
+# Shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+alias dockviz="docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
 
 # Operation system specific settings.
 case "$(uname -s)" in
