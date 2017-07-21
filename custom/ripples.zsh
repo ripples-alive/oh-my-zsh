@@ -20,52 +20,11 @@ export PYTHONSTARTUP=$HOME/.pystartup
 case "$(uname -s)" in
 
     Darwin)
-
-        alias timeout=gtimeout
-        alias p=proxychains4
-
-        # toggle iTerm Dock icon
-        # add this to your .bash_profile or .zshrc
-        function toggle() {
-            pb='/usr/libexec/PlistBuddy'
-            iTerm="/Applications/$@.app/Contents/Info.plist"
-
-            echo "Do you wish to hide $@ in Dock?"
-            select ync in "Hide" "Show" "Cancel"; do
-                case $ync in
-                    'Hide' )
-                        $pb -c "Add :LSUIElement bool true" $iTerm
-                        echo "relaunch $@ to take effectives"
-                        break
-                        ;;
-                    'Show' )
-                        $pb -c "Delete :LSUIElement" $iTerm
-                        echo "run killall '$@' to exit, and then relaunch it"
-                        break
-                        ;;
-                'Cancel' )
-                    break
-                    ;;
-                esac
-            done
-        }
-
+        source $ZSH_CUSTOM/specs/mac.zsh
         ;;
 
     Linux*)
-
-        alias p=proxychains
-        alias sysuser="systemctl --user"
-
-        function at() {
-            if [[ "$1" =~ ^[0-9]+$ ]]
-            then
-                sudo gdb attach $1
-            else
-                sudo gdb attach `pidof $1`
-            fi
-        }
-
+        source $ZSH_CUSTOM/specs/linux.zsh
         ;;
 
     CYGWIN*|MINGW32*|MSYS*)
