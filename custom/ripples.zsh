@@ -1,5 +1,4 @@
 ZSH_THEME="ripples"
-DISABLE_UPDATE_PROMPT="true"
 
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
